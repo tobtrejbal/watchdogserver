@@ -1,0 +1,25 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="watch.dog">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>watchdog.server.core.model.SensorValue</class>
+        <class>watchdog.server.core.model.Sample</class>
+        <class>watchdog.server.core.model.User</class>
+
+        <properties>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="watchdog"/>
+            <property name="hibernate.connection.password" value="W1AT57cEGgv"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/watchdog"/>
+            <property name="hibernate.show_sql" value = "false" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <property name="hibernate.connection.CharSet" value="utf8" />
+            <property name="hibernate.connection.characterEncoding" value="utf8" />
+            <property name="hibernate.connection.useUnicode" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="validate" />
+            <property name="hibernate.jdbc.batch_size" value="50" />
+        </properties>
+    </persistence-unit>
+</persistence>
